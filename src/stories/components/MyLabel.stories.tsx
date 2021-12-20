@@ -40,3 +40,10 @@ CustomFontColor.args = {
   fontColor: '#754877',
   size: 'h1',
 };
+
+export const CustomBackgroundColor = Template.bind({});
+CustomBackgroundColor.args = {
+  fontColor: '#ffffff',
+  size: 'h1',
+  backgroundColor: '#000000',
+};
