@@ -5,7 +5,12 @@ export default {
   component: MyLabel,
   title: 'Ui/Etiquetas/MyLabel',
   // Personalizacion control
-  argTypes: { size: { control: 'select' }, color: { control: 'select' } },
+  argTypes: {
+    size: { control: 'select' },
+    color: { control: 'select' },
+    // No hace falta si la propiedad tiene de nombre color
+    fontColor: { control: 'color' },
+  },
 } as ComponentMeta<typeof MyLabel>;
 
 const Template: ComponentStory<typeof MyLabel> = (args) => (
@@ -28,4 +33,10 @@ export const Tertiary = Template.bind({});
 Tertiary.args = {
   size: 'normal',
   color: 'tertiary',
+};
+
+export const CustomFontColor = Template.bind({});
+CustomFontColor.args = {
+  fontColor: '#754877',
+  size: 'h1',
 };

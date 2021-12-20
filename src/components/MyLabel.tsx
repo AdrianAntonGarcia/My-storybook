@@ -1,5 +1,4 @@
 import './mylabel.css';
-import { AllCaps } from '../stories/components/MyLabel.stories';
 
 export interface MyLabelProps {
   /**
@@ -20,6 +19,11 @@ export interface MyLabelProps {
    * Indica si todo el texto tiene que ir en mayúsculas
    */
   allCaps?: boolean;
+
+  /**
+   * Indica el color de la fuente
+   */
+  fontColor?: string;
 }
 
 export const MyLabel = ({
@@ -27,9 +31,13 @@ export const MyLabel = ({
   color = 'primary',
   label = 'No label',
   size = 'normal',
+  fontColor,
 }: MyLabelProps) => {
   return (
-    <span className={`${size} text-${color}`}>
+    <span
+      className={`label ${size} text-${color}`}
+      style={{ color: fontColor }}
+    >
       {allCaps ? label.toUpperCase() : label}
     </span>
   );
