@@ -21,12 +21,13 @@
   ],
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "npm run clean && tsc && npm run copy-files",
+    "build": "npm run clean && tsc && npm run copy-files && npm run copy-files-scss",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=9cc47355ab8d",
     "clean": "rimraf dist/",
-    "copy-files": "copyfiles -u 1 src/**/*.css dist/ && copyfiles -u 1 src/**/*.scss dist/"
+    "copy-files-css": "copyfiles -u 1 src/**/*.css dist/",
+    "copy-files-scss": " copyfiles -u 1 src/**/*.scss dist/"
   },
   "eslintConfig": {
     "extends": [
