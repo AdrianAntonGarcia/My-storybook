@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import './mylabel.css';
+import './mylabel.scss';
 export interface MyLabelProps {
     /**
      * Texto que va a tener el componente
@@ -27,3 +27,4 @@ export interface MyLabelProps {
     backgroundColor?: string;
 }
 export declare const MyLabel: ({ allCaps, color, label, size, fontColor, backgroundColor, }: MyLabelProps) => JSX.Element;
+export default MyLabel;

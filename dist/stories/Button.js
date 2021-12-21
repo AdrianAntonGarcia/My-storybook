@@ -24,7 +24,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Button = void 0;
 var jsx_runtime_1 = require("react/jsx-runtime");
-require("./button.css");
+require("./button.scss");
 /**
  * Primary UI component for user interaction
  */
@@ -36,3 +36,4 @@ var Button = function (_a) {
     return ((0, jsx_runtime_1.jsx)("button", __assign({ type: "button", className: ['storybook-button', "storybook-button--".concat(size), mode].join(' '), style: { backgroundColor: backgroundColor } }, props, { children: label }), void 0));
 };
 exports.Button = Button;
+exports.default = exports.Button;
